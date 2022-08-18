@@ -8,7 +8,7 @@ export default function TextArea(props) {
 				onChange={handleChange}
 				name={name}
 				type="text"
-				className="font-inter textarea-input"
+				className=" textarea-input  text-white  placeholder:text-[#828295] text-[12px] placeholder:italic "
 				placeholder={placeholder}
 			/>
 		</div>

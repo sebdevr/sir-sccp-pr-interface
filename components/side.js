@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Side() {
 	return (
-		<div className="w-[371px] m-auto">
+		<div className="w-[352px] m-auto">
 			<div className="bg-#0B0B22 overflow-hidden flex flex-wrap flex-col">
 				<div className="flex flex-wrap h-[20px] ">
 					<Image
@@ -48,7 +48,7 @@ export default function Side() {
 
 function RenderStyledBlocks(props) {
 	return (
-		<span className="bg-[#828295] rounded-sm mx-1 leading-[20px]  px-2">
+		<span className="bg-[#828295] rounded-sm mx-1 leading-[20px]  px-1">
 			{props.children}
 		</span>
 	);

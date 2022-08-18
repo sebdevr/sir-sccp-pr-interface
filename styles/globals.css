@@ -9,19 +9,28 @@
 
 
 
+.btn-login:after {
+  top: 2px; 
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background-color: #0b0b22;
+  z-index: -1;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+}
+
+
 .btn-login {
   border: none;
   display: inline-block;
   border-radius: 5px;
-  color: white;
   position: relative;
   z-index: 1;
   font-size: 14px;
   padding: 17px 35px;
   font-weight: 100;
-  text-transform: uppercase;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 2px;
+   letter-spacing: 2px;
 }
 
 .btn-login:before, 
@@ -60,6 +69,7 @@
 
 .btn-login:hover:after {
   opacity: 0;
+  
 }
 
 
@@ -71,7 +81,6 @@
   border: 1px solid rgba(130, 130, 149, 0.3);
   border-radius:5px;
   background-color:transparent;
-  color: #828295;
   padding: 0 15px;
   font-size: 14px;
 }
@@ -81,18 +90,16 @@
   border: 1px solid rgba(130, 130, 149, 0.3);
   border-radius:5px;
   background-color:transparent;
-  color: #828295;
   padding: 0 15px;
   font-size: 14px;
 }
 
 
 .textarea-input{
-  @apply w-full font-inter italic;
+  @apply w-full font-inter;
   border: 1px solid rgba(130, 130, 149, 0.3);
   border-radius:5px;
   background-color:transparent;
-  color: #828295;
   padding: 20px 15px;
   resize: none;
   font-size: 14px;
@@ -105,8 +112,15 @@
   height: 0px;
 }
 
-
-
+select {
+  -webkit-appearance: none !important;
+-moz-appearance: none !important;
+background-color: #fafafa;
+background-image: url("/assets/Bottom.svg");
+ background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+}
 
 [type="date"] {
   background: url("/assets/calender.svg")  97% 50% no-repeat ;
@@ -144,4 +158,31 @@ option {
 
 .btn-gradient{
   @apply w-full bg-gradient-to-r from-[#85FFC4] to-[#5CC6FF] 
+}
+
+
+.select-wrapper__control{
+background-color: #0b0b22!important;
+outline: none!important;
+border: 1px solid rgba(130, 130, 149, 0.3) !important;
+ padding: 10px 15px!important;
+}
+
+.select-wrapper__placeholder{
+  color: #828295!important;
+  font-family: "Inter", sans-serif!important;
+  font-size: 14px;
+  font: italic !important;;
+
+}
+
+.select-wrapper__single-value{
+  color: white!important;
+  font-family: "Inter", sans-serif!important;
+  font-size: 14px;
+  font: italic !important;;
+}
+
+.select-wrapper__indicator-separator{
+  display: none!important;
 }

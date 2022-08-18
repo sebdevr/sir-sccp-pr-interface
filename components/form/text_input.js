@@ -7,7 +7,7 @@ export default function TextInput(props) {
 				type="text"
 				onChange={handleChange}
 				name={name}
-				className="font-inter text-input"
+				className="font-inter text-input text-white  placeholder:text-[#828295] text-[12px] placeholder:italic"
 				placeholder={placeholder}
 			/>
 		</div>

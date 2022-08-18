@@ -74,12 +74,12 @@ export default function CreatePr({
 			</Head>
 			<div>
 				<div className="bg-[#0B0B22] w-full min-h-screen overflow-hidden  ">
-					<div className="container m-auto my-24 flex flex-wrap px-5 flex-row gap-20 ">
-						<div className="m-auto  md:mt-5">
+					<div className="container m-auto my-24 flex flex-wrap px-5  flex-row gap-20 ">
+						<div className="m-auto   md:mt-5">
 							<Side />
 							<Tabs active={active} setActive={setActive} />
 						</div>
-						<div className="w-full  xl:w-[710px] ring-[1px] overflow-hidden  m-auto ring-gray-500 py-5 px-1 rounded-[15px]">
+						<div className="w-full p-2 md:p-5   xl:w-[710px] ring-[1px] overflow-hidden  m-auto ring-gray-500 py-5 px-1 rounded-[15px]">
 							<UserCard
 								username={username}
 								avatar_url={avatar_url}
@@ -88,7 +88,7 @@ export default function CreatePr({
 								bio={bio}
 							/>
 
-							<div className="m-auto w-full  p-2 md:p-5 ">
+							<div className="m-auto w-full  ">
 								<Transition
 									show={active === "sip"}
 									enter="transition-opacity duration-75"
@@ -128,8 +128,22 @@ export default function CreatePr({
 }
 
 function RenderSipForm({ username, access_token }) {
-	const options = ["Ethereum", "Optimism", "Ethereum & Optimism"];
-	const options2 = ["Meta-Governance", "Governance"];
+	const options = [
+		{ value: "Ethereum", label: "Ethereum" },
+		{
+			value: "Optimism",
+			label: "Optimism",
+		},
+		{ value: "Ethereum & Optimism", label: "Ethereum & Optimism" },
+	];
+	const options2 = [
+		{ value: "Meta-Governance", label: "Meta-Governance" },
+		{ value: "Governance", label: "Governance" },
+		{
+			value: "Governance & Meta-Governance",
+			label: "Governance & Meta-Governance",
+		},
+	];
 
 	const schema = Joi.object({
 		abstract: Joi.string().required().max(200),
@@ -181,14 +195,15 @@ function RenderSipForm({ username, access_token }) {
 		//adding the values to the input
 		tempValues.forEach((key) => {
 			//removing the temp from the keys
-			console.log(key);
 			const name = key.split("-")[1];
-			input[name] = [...input[name], input[key]];
+			if (input[key] && input[key].length > 0)
+				input[name] = [...input[name], input[key]];
 			delete input[key];
 		});
 	};
 
 	const handleSubmit = async (e) => {
+
 		e.preventDefault();
 		getLastValues();
 		//validating input
@@ -267,7 +282,6 @@ function RenderSipForm({ username, access_token }) {
 
 			<CustomInput
 				label="Implementor(s)*"
-				width={300}
 				name="implementor"
 				setValue={setInput}
 				value={input}
@@ -363,7 +377,14 @@ function RenderSipForm({ username, access_token }) {
 }
 
 function RenderSccpForm({ username, access_token }) {
-	const options = ["Ethereum", "Optimism", "Ethereum & Optimism"];
+	const options = [
+		{ value: "Ethereum", label: "Ethereum" },
+		{
+			value: "Optimism",
+			label: "Optimism",
+		},
+		{ value: "Ethereum & Optimism", label: "Ethereum & Optimism" },
+	];
 
 	const schema = Joi.object({
 		abstract: Joi.string().required().max(200),

@@ -1,6 +1,6 @@
 import React from "react";
 export default function CustomInput(props) {
-	const { label, placeholder, width = 175, name, setValue, value } = props;
+	const { label, placeholder, width = 200, name, setValue, value } = props;
 	const errRef = React.useRef(null);
 	const parentRef = React.useRef(null);
 	const inputRef = React.useRef(null);
@@ -19,7 +19,7 @@ export default function CustomInput(props) {
 	const handelChange = (e) => {
 		errRef.current.innerHTML = "";
 		setNewInput(e.target.value);
-		
+
 		setValue({
 			...value,
 			[newName]: e.target.value,
@@ -29,13 +29,13 @@ export default function CustomInput(props) {
 		//This function will and a new input to the
 		//getting the elements id
 		e.preventDefault();
-		if (value[newName]&&value[newName] !== "") {
+		if (value[newName] && value[newName] !== "") {
 			setValue({
 				...value,
 				[name]: [...value[name], value[newName]],
-				[newName]:"",
+				[newName]: "",
 			});
-			inputRef.current.value="";			
+			inputRef.current.value = "";
 		} else {
 			errRef.current.innerText = "Please enter valid name";
 		}
@@ -68,7 +68,7 @@ export default function CustomInput(props) {
 									<input
 										id={index}
 										value={value[name][index]}
-										className="font-inter text-input"
+										className="font-inter text-input  text-white  placeholder:text-[#828295] text-[12px] placeholder:italic"
 										style={{ width }}
 										placeholder={item}
 										onChange={handleUpdate}
@@ -78,7 +78,7 @@ export default function CustomInput(props) {
 											e.preventDefault();
 											handelDelete(item);
 										}}
-										className="font-inter text-gray-500 absolute top-5 right-3 text-[12px]"
+										className="font-inter absolute top-5 right-3 text-[12px]  text-white  placeholder:text-[#828295]  placeholder:italic"
 									>
 										❌
 									</button>
@@ -90,7 +90,7 @@ export default function CustomInput(props) {
 						type="text"
 						value={value[newName]}
 						ref={inputRef}
-						className="font-inter text-input-custom "
+						className="font-inter  text-white  placeholder:text-[#828295] text-[12px] placeholder:italic text-input-custom "
 						style={{ width }}
 						placeholder={placeholder}
 					/>

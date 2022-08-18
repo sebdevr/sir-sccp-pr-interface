@@ -16,7 +16,7 @@ export default function Login() {
 						</div>
 						<div className="w-[750px] ring-[1px] h-[650px] m-auto grid place-items-center ring-gray-500 rounded-[15px]">
 							<div className="flex flex-wrap justify-center flex-col gap-5">
-								<p className="text-white text-inter text-[18px] font-bold">
+								<p className="text-white font-inter text-[18px] font-bold">
 									Authorize yourself with{" "}
 								</p>
 								<button
@@ -26,7 +26,7 @@ export default function Login() {
 											"_self"
 										)
 									}
-									className="btn-login text-[14px]"
+									className="btn-login text-[14px] text-[#78edd7] duration-300 hover:text-white font-inter"
 								>
 									Github Login
 								</button>
