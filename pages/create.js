@@ -538,7 +538,7 @@ function RenderSccpForm({ username, access_token }) {
 				rows={8}
 				handleChange={handleChange}
 				name="abstract"
-				placeholder="A short (~200 words) description of the proposed change, the abstract should clearly describe the proposed change. This is what will be done if the SIP is implemented, not why it should be done or how it will be done. If the SIP proposes deploying a new contract, write, 'we propose to deploy a new contract that will do x'"
+				placeholder="A short (~200 words) description of the proposed change, the abstract should clearly describe the proposed change. This is what will be done if the SCCP is implemented, not why it should be done or how it will be done. If the SCCP proposes deploying a new contract, write, 'we propose to deploy a new contract that will do x'"
 			/>
 			<TextArea
 				name="motivation"
