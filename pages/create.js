@@ -520,8 +520,8 @@ function RenderSccpForm({ username, access_token }) {
 
 			<CustomInput
 				name="SCCPNumbers"
-				label="SIP number(s) (optional)"
-				placeholder="SIP number"
+				label="SCCP number(s) (optional)"
+				placeholder="SCCP number"
 				setValue={setInput}
 				value={input}
 			/>
@@ -538,14 +538,14 @@ function RenderSccpForm({ username, access_token }) {
 				rows={8}
 				handleChange={handleChange}
 				name="abstract"
-				placeholder="A short (~200 words) description of the proposed change, the abstract should clearly describe the proposed change. This is what will be done if the SIP is implemented, not why it should be done or how it will be done. If the SIP proposes deploying a new contract, write, 'we propose to deploy a new contract that will do x'"
+				placeholder="A short (~200 words) description of the proposed change, the abstract should clearly describe the proposed change. This is what will be done if the SCCP is implemented, not why it should be done or how it will be done. If the SCCP proposes deploying a new contract, write, 'we propose to deploy a new contract that will do x'"
 			/>
 			<TextArea
 				name="motivation"
 				label="Motivation*"
 				handleChange={handleChange}
 				rows={8}
-				placeholder="This is the problem statement. This is the why of the SIP. It should clearly explain why the current state of the protocol is inadequate. It is critical that you explain why the change is needed, if the SIP proposes changing how something is calculated, you must address why the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!"
+				placeholder="This is the problem statement. This is the why of the SCCP. It should clearly explain why the current state of the protocol is inadequate. It is critical that you explain why the change is needed, if the SCCP proposes changing how something is calculated, you must address why the current calculation is innaccurate or wrong. This is not the place to describe how the SCCP will address the issue!"
 			/>
 			<TextInput
 				name="copyright"
