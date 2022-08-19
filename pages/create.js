@@ -545,7 +545,7 @@ function RenderSccpForm({ username, access_token }) {
 				label="Motivation*"
 				handleChange={handleChange}
 				rows={8}
-				placeholder="This is the problem statement. This is the why of the SIP. It should clearly explain why the current state of the protocol is inadequate. It is critical that you explain why the change is needed, if the SIP proposes changing how something is calculated, you must address why the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!"
+				placeholder="This is the problem statement. This is the why of the SCCP. It should clearly explain why the current state of the protocol is inadequate. It is critical that you explain why the change is needed, if the SCCP proposes changing how something is calculated, you must address why the current calculation is innaccurate or wrong. This is not the place to describe how the SCCP will address the issue!"
 			/>
 			<TextInput
 				name="copyright"
