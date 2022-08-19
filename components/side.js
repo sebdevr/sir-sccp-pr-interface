@@ -23,8 +23,8 @@ export default function Side() {
 				</div>
 				<div className="mt-[33px] w-[352px]">
 					<p className="text-[14px] leading-[18px] text-white font-inter">
-						This interface allows you to submit PRs of Synthetix SIPs to the
-						github repository. You can have a look at the current SIP at &nbsp;
+						This interface allows you to submit PRs of Synthetix SIP's/SCCP's to the
+						github repository. You can have a look at the current SIP/SCCP at &nbsp;
 						<a
 							className="underline"
 							target="_blank"
@@ -37,7 +37,7 @@ export default function Side() {
 					<p className="mt-2 font-bold text-[14px] leading-[18px] text-white font-inter">
 						You&#39;ll be making PR to{" "}
 						<RenderStyledBlocks>master</RenderStyledBlocks> Branch of{" "}
-						<RenderStyledBlocks>SIPs</RenderStyledBlocks> Repository, owned by
+						<RenderStyledBlocks>SIP's/SCCP's</RenderStyledBlocks> Repository, owned by
 						<RenderStyledBlocks>Synthetixio</RenderStyledBlocks>
 					</p>
 				</div>
