@@ -520,8 +520,8 @@ function RenderSccpForm({ username, access_token }) {
 
 			<CustomInput
 				name="SCCPNumbers"
-				label="SIP number(s) (optional)"
-				placeholder="SIP number"
+				label="SCCP number(s) (optional)"
+				placeholder="SCCP number"
 				setValue={setInput}
 				value={input}
 			/>
