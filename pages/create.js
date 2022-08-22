@@ -323,7 +323,7 @@ function RenderSipForm({ username, access_token }) {
 				name="SIPNumbers"
 				setValue={setInput}
 				value={input}
-				label="SIP number(s) (optional)"
+				label="Reference SIP(s) (optional)"
 				placeholder="SIP number"
 			/>
 
