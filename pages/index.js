@@ -22,7 +22,7 @@ export default function Login() {
 								<button
 									onClick={() =>
 										window.open(
-											"https://github.com/login/oauth/authorize?client_id=fe7d44f600f86aa803c4&scope=read%3Auser%20repo",
+											"https://github.com/login/oauth/authorize?client_id=fe7d44f600f86aa803c4&scope=read%3Auser",
 											"_self"
 										)
 									}
