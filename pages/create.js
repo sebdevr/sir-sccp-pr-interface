@@ -153,7 +153,6 @@ function RenderSipForm({ username, access_token }) {
 			.min(1),
 		configurableValues: Joi.string().required().max(200),
 		createdDate: Joi.date().required(),
-		discussion: Joi.string().max(200),
 		implementationDate: Joi.date(),
 		implementor: Joi.array()
 			.items(Joi.string().required().max(50))
@@ -301,12 +300,6 @@ function RenderSipForm({ username, access_token }) {
 			/>
 
 			<TextInput
-				name="discussion"
-				handleChange={handleChange}
-				placeholder="Thread on https://research.synthetix.io/"
-				label="Discussion Link"
-			/>
-			<TextInput
 				name="proposal"
 				handleChange={handleChange}
 				placeholder="Thread on https://research.synthetix.io/"
@@ -392,7 +385,6 @@ function RenderSccpForm({ username, access_token }) {
 			.required()
 			.min(1),
 		createdDate: Joi.date().required(),
-		discussion: Joi.string().max(200),
 		motivation: Joi.string().max(200),
 		copyright: Joi.string(),
 		simpleSummary: Joi.string().required().max(200),
@@ -500,12 +492,6 @@ function RenderSccpForm({ username, access_token }) {
 				placeholder="Author name"
 			/>
 
-			<TextInput
-				handleChange={handleChange}
-				name="discussion"
-				placeholder="Thread on https://research.synthetix.io/"
-				label="Discussion Link"
-			/>
 			<DateInput
 				handleChange={handleChange}
 				name="createdDate"
