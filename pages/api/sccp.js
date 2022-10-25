@@ -2,8 +2,11 @@ import axios from "axios";
 
 export default async function handler(req, res) {
 	const repo = "SIPs";
+	// const repo = "typescript";
 	const owner = "Synthetixio";
+	// const owner = "nikhilswain";
 	const baseBranch = "master";
+	// const baseBranch = "main";
 	if (req.method === "POST") {
 		try {
 			const {
@@ -20,7 +23,7 @@ export default async function handler(req, res) {
 				motivation,
 				copyright,
 			} = req.body;
-			if (title == null || username == null || author == null) {
+			if (title == null || username == null) {
 				throw "Invaid Fields";
 			}
 
@@ -30,10 +33,22 @@ export default async function handler(req, res) {
 				typeof SCCPNumbers === "string" ? SCCPNumbers : SCCPNumbers?.join(", ");
 
 			//	consturcting body:
-			const header = `
-| SCCP     | Title		| Network   | Status 	| Author      | Created				 | Updated 				| Requires		|
-| ---      | ---      	| ---     | ---			| ---         | ---						 | --- 		 				| ---					|
-| ${sccp}  | ${title} |${network} | Draft		| ${authorStr}| ${createdDate} | ${updatedDate} | ${requires} |
+			// 			const header = `
+			// | SCCP     | Title		| Network   | Status 	| Author      | Created				 | Updated 				| Requires		|
+			// | ---      | ---      	| ---     | ---			| ---         | ---						 | --- 		 				| ---					|
+			// | ${sccp}  | ${title} |${network} | Draft		| ${authorStr}| ${createdDate} | ${updatedDate} | ${requires} |
+			// `;
+
+			const header = `---
+sccp: ${sccp}
+network: ${network}
+title: ${title}
+author: ${authorStr ?? ""}
+status: Draft
+created: ${createdDate}
+type: Governance
+requires: ${requires ?? "-"}
+---
 `;
 
 			const PRtitle = `Create SCCP-${sccp}.md`;
