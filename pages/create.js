@@ -390,7 +390,6 @@ function RenderSccpForm({ username, access_token, sccp }) {
 		SCCPNumbers: Joi.array().items(Joi.number()),
 		title: Joi.string().required().max(100),
 		network: Joi.string().required().max(50),
-		updatedDate: Joi.date().required(),
 	});
 
 	const [input, setInput] = React.useState({
@@ -499,11 +498,6 @@ function RenderSccpForm({ username, access_token, sccp }) {
 				name="createdDate"
 				label="Created on*"
 				defaultVal
-			/>
-			<DateInput
-				name="updatedDate"
-				handleChange={handleChange}
-				label="Updated on"
 			/>
 
 			<CustomInput

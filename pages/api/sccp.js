@@ -17,7 +17,6 @@ export default async function handler(req, res) {
 				author,
 				SCCPNumbers,
 				createdDate,
-				updatedDate,
 				simpleSummary,
 				abstract,
 				motivation,
@@ -32,20 +31,13 @@ export default async function handler(req, res) {
 			const requires =
 				typeof SCCPNumbers === "string" ? SCCPNumbers : SCCPNumbers?.join(", ");
 
-			//	consturcting body:
-			// 			const header = `
-			// | SCCP     | Title		| Network   | Status 	| Author      | Created				 | Updated 				| Requires		|
-			// | ---      | ---      	| ---     | ---			| ---         | ---						 | --- 		 				| ---					|
-			// | ${sccp}  | ${title} |${network} | Draft		| ${authorStr}| ${createdDate} | ${updatedDate} | ${requires} |
-			// `;
-
 			const header = `---
 sccp: ${sccp}
 network: ${network}
 title: ${title}
 author: ${authorStr ?? ""}
 status: Draft
-created: ${createdDate}
+created: ${createdDate.split(" ")[0]}
 type: Governance
 requires: ${requires ?? "-"}
 ---

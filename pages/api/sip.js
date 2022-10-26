@@ -17,7 +17,6 @@ export default async function handler(req, res) {
 				type,
 				author,
 				implementor,
-				proposal,
 				SIPNumbers,
 				createdDate,
 				// additional fields
@@ -47,7 +46,7 @@ status: Draft
 type: ${type}
 author: ${authorStr}
 implementor: ${implementorStr}
-created: ${createdDate}
+created: ${createdDate.split(" ")[0]}
 requires: ${requires}
 ---
 `;
