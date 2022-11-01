@@ -396,7 +396,7 @@ function RenderSccpForm({ username, access_token, sccp, setLoading }) {
 	];
 
 	const schema = Joi.object({
-		abstract: Joi.string().required().max(1000),
+		abstract: Joi.string().required(),
 		author: Joi.array()
 			.items(Joi.string().required().max(50))
 			.required()
