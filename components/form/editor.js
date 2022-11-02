@@ -35,7 +35,7 @@ export default function EditorContainer({
 					{ align: [] },
 					{ "code-block": true },
 				],
-				["link", "image", "video"],
+				["link", "image"],
 				["clean"],
 			],
 		},
@@ -56,7 +56,6 @@ export default function EditorContainer({
 		"indent",
 		"link",
 		"image",
-		"video",
 		"align",
 		"code-block",
 	];
